@@ -1,0 +1,156 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+  font-family: Arial, sans-serif;
+  background: #eaf3fb;
+  color: #1f2937;
+  transition: background 0.5s ease;
+}
+
+.content {
+  width: 100%;
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 10px 0 32px;
+  text-align: center;
+  color: #2563eb;
+  font-size: 2.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #eaf1fc;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#message {
+  min-height: 24px;
+  margin: 22px 0;
+  overflow-wrap: anywhere;
+}
+
+#weather-result {
+  margin-top: 35px;
+  padding-top: 24px;
+  border-top: 1px solid #dbe3ed;
+}
+
+#city-name {
+  margin: 0 0 20px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+#temperature {
+  margin: 20px 0 28px;
+  text-align: center;
+  color: #2563eb;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: bold;
+}
+
+#conditions,
+#humidity,
+#wind {
+  margin: 18px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#unit-toggle {
+  display: block;
+  margin: 30px auto 0;
+}
+
+/* Weather-based backgrounds */
+
+body.sunny {
+  background: linear-gradient(135deg, #fff1a8, #f8b500);
+}
+
+body.cloudy {
+  background: linear-gradient(135deg, #dce4ec, #9baebe);
+}
+
+body.rainy {
+  background: linear-gradient(135deg, #485563, #29323c);
+}
+
+body.snowy {
+  background: linear-gradient(135deg, #e6f0f5, #a8c8df);
+}
+
+body.windy {
+  background: linear-gradient(135deg, #d8f0ff, #83c5e8);
+}
+
+body.foggy {
+  background: linear-gradient(135deg, #e0e5e9, #a6b2bd);
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
